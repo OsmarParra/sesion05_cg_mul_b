@@ -1,5 +1,6 @@
 package sesion05_cg_mul_b;
 import java.util.Scanner;
+public class Main
 {
 	public static void main(String[] args) {
 		// Defina y asigne dos objetos, un Cadrado y una Circunferencia
