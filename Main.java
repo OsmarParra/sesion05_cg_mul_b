@@ -9,10 +9,10 @@ import java.util.Scanner;
 		 int x,y;
 		 System.out.println ("Introduzca valores del vector de Traslacion: ");
 		 System.out.println ("x: ");
-		 Scanner entrada = new Scanner(System.in);
 		 x = entrada.nextInt();
 		 System.out.println ("y: ");
 		 y = entrada.nextInt();
+		 Scanner entrada = new Scanner(System.in);
 	}
 }
 
@@ -36,9 +36,11 @@ class Coord {
 class Cuadrado {
     private Coord c;
     private int lado;
-    public Cuadrado(Coord c, int lado) {
+    private float grados;
+    public Cuadrado(Coord c, int lado, float grados) {
         this.c = c;
         this.lado = lado;
+	this.grados = grados;
     }
     public void Traslacion(Coord tr) {  // Complete los parámetros requeridos
         c.setX(tr.getX()+c.getX());
@@ -47,8 +49,8 @@ class Cuadrado {
     public void Escalado(int es) {  // Complete los parámetros requeridos
         lado = (int)lado*(1+es/100.0f)
     }
-    public void Rotacion() {  // Complete los parámetros requeridos
-        
+    public void Rotacion(float rt) {  // Complete los parámetros requeridos
+        x = setX*Math.cos(rt);
     }
 }
 
